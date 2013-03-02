@@ -1,0 +1,51 @@
+.contacts_admin_widget
+  thead
+    th
+      text-align: left
+      input
+        text-align: center
+  tfoot
+    td
+      text-align: right
+
+  .contact
+    td
+      height: 30px
+      padding: 2px 5px
+    td.small
+      width: 70px
+    td.remove
+      text-align: right
+      padding: 0
+      max-width: 50px
+    td.ops
+      min-width: 180px
+      text-align: left
+      padding: 0
+
+    // Initial state: hide save/cancel
+    button
+      &.save, &.cancel
+        display: none
+
+      // Remove and edit links visible on hover only when not in edit mode
+      &.remove, &.edit
+        visibility: hidden
+
+    &.editing button, &.saving button
+      &.cancel, &.save, &.remove
+        visibility: visible
+        display: inherit
+
+      &.edit
+        display: none
+
+  .contacts-container .contact.ui-state-hover
+    // Remove and edit links visible on hover only when not in edit mode
+    button
+      &.remove, &.edit
+        visibility: visible
+
+  table
+    &.select-enabled .contact
+      cursor: pointer
