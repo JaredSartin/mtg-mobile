@@ -1,0 +1,9 @@
+//= require ./namespace
+//= require ./jquery
+//= require ./jquery.expand
+//= require ./inflection
+//= require ./underscore
+//= require ./backbone
+//= require ./backbone-support/support
+//= require ./backbone-support/observer
+//= require_tree ./backbone-support

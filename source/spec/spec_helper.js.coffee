@@ -6,7 +6,7 @@ afterEach ->
   $.fx.off = old_jfx_value
 
 h = {}
-h.el_selector = "#test"
+h.el_selector = "#sandbox"
 h.el = -> $(h.el_selector)
 h.dialog = -> $('#drewbox')
 h.search_element = -> if h.dialog().is(':visible') then h.dialog() else h.el()
@@ -28,16 +28,6 @@ h.has_focus = (selector) -> $(selector).get(0) == ($(selector).get(0)).ownerDocu
 h.args_for = (stub) -> stub.args[0][0]
 h.click = (button) ->
   element = h.search_element().find(selector_fix(button))
-  # 8/14/12
-  # So....yeah. When our command line capybara-webkit driver tries to click on
-  # a label attached to a checkbox, the checkbox value doesn't toggle. This works
-  # fine in web browsers (firefox and chrome) in both the app and tests.
-  # I have no explanation for this behavior. So from now on we'll be sticking to
-  # clicking on checkboxes instead of labels. This matcher will give us early
-  # warning if we click on a label instead of a checkbox.
-  # 
-  # Please improve me if an opportunity arises.
-  expect(element).not.toBeALabel()
   element.click()
 
 window.h = h
@@ -50,6 +40,7 @@ selector_fix = (selector) ->
 
 # Mock and stub support
 beforeEach ->
+  setFixtures(sandbox())
   @fakes = sinon.create(sinon.collection)
   h.fakes = @fakes
 
