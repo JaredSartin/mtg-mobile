@@ -1,5 +1,5 @@
 namespace 'MtgHelper.Game', (exports) ->
-  class exports.Counter extends Backbone.View
+  class exports.Counter extends Support.CompositeView
     className: 'counter'
     @build: -> new @(arguments...)
 

@@ -17,5 +17,7 @@ describe 'MtgHelper.Game', ->
     it 'shows 2 counter views', ->
       @subject.render()
 
-      expect(@counter_build).toHaveBeenCalledWith(el: 'counter plainswalker-1')
-      expect(@counter_build).toHaveBeenCalledWith(el: 'counter plainswalker-2')
+      expect(@counter_build).toHaveBeenCalledWith(className: 'counter pw1')
+      expect(@counter_build).toHaveBeenCalledWith(className: 'counter pw2')
+
+      expect(h.find('.counter').length).toEqual 2

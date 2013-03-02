@@ -1,2 +1,4 @@
+#content
 :coffeescript
-  namespace 'MtgHelper', (exports) =>
+  game = MtgHelper.Game.build(el: '#content')
+  game.render()
