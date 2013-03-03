@@ -1,3 +1,4 @@
+//= require ./modernizr
 //= require ./namespace
 //= require ./jquery
 //= require ./jquery.expand

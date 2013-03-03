@@ -3,8 +3,11 @@ namespace 'MtgHelper', (exports) ->
     @build: -> new @(arguments...)
 
     render: ->
-      @plainswalker_1_counter = MtgHelper.Game.Counter.build(className: 'counter pw1')
-      @plainswalker_2_counter = MtgHelper.Game.Counter.build(className: 'counter pw2')
+      count = 2
+      @counters = []
+      _.times(count, (n) =>
+        @counters.push(MtgHelper.Game.Counter.build(className: "counter pw#{n+1}"))
+      )
 
-      @appendChild(@plainswalker_1_counter)
-      @appendChild(@plainswalker_2_counter)
+      @appendChild(counter) for counter in @counters
+      @$el.addClass("counters-#{@counters.length}")

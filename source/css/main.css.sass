@@ -1,0 +1,109 @@
+@import "compass/css3/box-shadow"
+@import "compass/css3/transition"
+@import "compass/css3/border-radius"
+
+$black: #1a1a1a
+$dark_grey: #303030
+$lighter_grey: #F2F2F2
+$medium_red: #A10000
+
+body
+  background-image: url('/img/stressed_linen.png')
+
+  #content
+    +single-box-shadow(black, 0, 0, 100px, 10px, true)
+    margin: 0
+    padding: 0
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+
+//=================================
+// Counters Section
+//=================================
+
+.counters-1
+  .counter
+    height: 100%
+.counters-2
+  .counter
+    height: 50%
+.counters-3
+  .counter
+    height: 33%
+.counters-4
+  .counter
+    height: 25%
+
+=counter-fix
+  .life-counter:after
+    +border-radius(5px) 
+    display: block
+    width: 6px
+    height: 20px
+    content: '.'
+    text-indent: -999999em
+    background-color: $lighter_grey
+    position: absolute
+    left: -3px
+    top: 10px
+
+.counter
+  text-align: center
+  .controls
+    clear: both
+  .counter-container
+    +border-radius(5px) 
+    width: 80%
+    height: 20px
+    padding: 3px
+    background-color: $dark_grey
+    margin: 30px auto 25px
+    .remaining-life
+      +transition-property(width)
+      +transition-duration(.5s)
+      +transition-timing-function(ease)
+      +border-radius(4px) 
+      position: relative
+      height: 20px
+      background-color: $lighter_grey
+      .life-counter
+        +border-radius(28px) 
+        float: right
+        position: relative
+        top: -13px
+        left: 20px
+        height: 28px
+        width: 28px
+        padding: 5px
+        text-align: center
+        font-size: 20px
+        border: 3px solid $dark_grey
+        background-color: $lighter_grey
+    &.life-full
+      .remaining-life
+        +counter-fix
+        width: 100%
+    &.life-1
+      .life-counter
+        top: -15px
+        border: 5px solid $medium_red
+      .remaining-life
+        background-color: $medium_red
+        width: 5%
+    &.life-empty
+      .life-counter
+        top: -15px
+        border: 5px solid $medium_red
+      .remaining-life
+        width: 0%
+    $i: 19
+    @while $i > 1
+      &.life-#{$i}
+        .remaining-life
+          +counter-fix
+          width: 5% * $i
+      $i: $i - 1

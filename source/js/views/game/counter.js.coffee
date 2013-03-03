@@ -24,22 +24,20 @@ namespace 'MtgHelper.Game', (exports) ->
       @
 
     set_life_bar: ->
-      lb_class = if @life >= 20
+      new_life_class = if @life >= 20
         'life-full'
       else if @life <= 0
         'life-empty'
       else
         "life-#{@life}"
 
-      @_clear_old_life()
-      @$('.app-counter-container').addClass(lb_class)
+      css_classes = @$('.app-counter-container').attr('class').split " "
+      old_life_class = _.find(css_classes, (css_class) => css_class.match /^life/)
+      @$('.app-counter-container').addClass(new_life_class)
+      if not (new_life_class == old_life_class)
+        @$('.app-counter-container').removeClass(old_life_class)
 
     _clear_old_life: ->
-      css_classes = @$('.app-counter-container').attr('class').split " "
-      life_class = _.find(css_classes, (css_class) =>
-        css_class.match /^life/
-      )
-      @$('.app-counter-container').removeClass(life_class)
 
     decrement_five: -> @_change_life(-5)
     decrement_one: -> @_change_life(-1)

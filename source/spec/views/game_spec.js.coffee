@@ -21,3 +21,4 @@ describe 'MtgHelper.Game', ->
       expect(@counter_build).toHaveBeenCalledWith(className: 'counter pw2')
 
       expect(h.find('.counter').length).toEqual 2
+      expect(h.el()).toHaveClass "counters-2"
