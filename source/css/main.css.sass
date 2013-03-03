@@ -3,7 +3,7 @@
 @import "compass/css3/border-radius"
 
 $black: #1a1a1a
-$dark_grey: #303030
+$dark_grey: #404040
 $lighter_grey: #F2F2F2
 $medium_red: #A10000
 
@@ -87,23 +87,26 @@ body
       .remaining-life
         +counter-fix
         width: 100%
-    &.life-1
-      .life-counter
-        top: -15px
-        border: 5px solid $medium_red
-      .remaining-life
-        background-color: $medium_red
-        width: 5%
     &.life-empty
       .life-counter
         top: -15px
         border: 5px solid $medium_red
       .remaining-life
+        background-color: $medium_red
         width: 0%
     $i: 19
-    @while $i > 1
+    @while $i > 3
       &.life-#{$i}
         .remaining-life
           +counter-fix
+          width: 5% * $i
+      $i: $i - 1
+    @while $i > 0
+      &.life-#{$i}
+        .life-counter
+          top: -15px
+          border: 5px solid $medium_red
+        .remaining-life
+          background-color: $medium_red
           width: 5% * $i
       $i: $i - 1
