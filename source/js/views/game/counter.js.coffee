@@ -21,7 +21,7 @@ namespace 'MtgHelper.Game', (exports) ->
 
       @set_life_bar()
 
-      if $('body').hasClass('touch')
+      if $('html').hasClass('touch')
         @$('.app-decrement-five').hammer().on('tap', => @decrement_five())
         @$('.app-decrement-one').hammer().on('tap', => @decrement_one())
         @$('.app-increment-one').hammer().on('tap', => @increment_one())
