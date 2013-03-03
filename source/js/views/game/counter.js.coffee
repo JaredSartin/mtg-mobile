@@ -3,11 +3,11 @@ namespace 'MtgHelper.Game', (exports) ->
     className: 'counter'
     @build: -> new @(arguments...)
 
-    events:
-      'click .app-decrement-five': 'decrement_five'
-      'click .app-decrement-one': 'decrement_one'
-      'click .app-increment-one': 'increment_one'
-      'click .app-increment-five': 'increment_five'
+    # events:
+    #   'click .app-decrement-five': 'decrement_five'
+    #   'click .app-decrement-one': 'decrement_one'
+    #   'click .app-increment-one': 'increment_one'
+    #   'click .app-increment-five': 'increment_five'
 
     initialize: ->
       @template = JST['views/game/counter']
@@ -20,6 +20,17 @@ namespace 'MtgHelper.Game', (exports) ->
       @$el.html($(@template()).expand(directive))
 
       @set_life_bar()
+
+      if $('body.touch')
+        @$('.app-decrement-five').hammer().on('tap', => @decrement_five())
+        @$('.app-decrement-one').hammer().on('tap', => @decrement_one())
+        @$('.app-increment-one').hammer().on('tap', => @increment_one())
+        @$('.app-increment-five').hammer().on('tap', => @increment_five())
+      else
+        @$('.app-decrement-five').on('click', => @decrement_five())
+        @$('.app-decrement-one').on('click', => @decrement_one())
+        @$('.app-increment-one').on('click', => @increment_one())
+        @$('.app-increment-five').on('click', => @increment_five())
 
       @
 
@@ -37,8 +48,6 @@ namespace 'MtgHelper.Game', (exports) ->
       if not (new_life_class == old_life_class)
         @$('.app-counter-container').removeClass(old_life_class)
 
-    _clear_old_life: ->
-
     decrement_five: -> @_change_life(-5)
     decrement_one: -> @_change_life(-1)
     increment_one: -> @_change_life(1)
@@ -48,4 +57,5 @@ namespace 'MtgHelper.Game', (exports) ->
       @life = @life + life_change
       @$('.app-life-counter').text @life
       @set_life_bar()
+
       false

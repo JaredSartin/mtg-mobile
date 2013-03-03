@@ -2,6 +2,7 @@
 //= require ./namespace
 //= require ./jquery
 //= require ./jquery.expand
+//= require ./jquery.hammer
 //= require ./inflection
 //= require ./underscore
 //= require ./backbone
