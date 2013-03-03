@@ -51,5 +51,3 @@ namespace 'MtgHelper.Game', (exports) ->
       @life = @life + life_change
       @$('.app-life-counter').text @life
       @set_life_bar()
-
-      false
