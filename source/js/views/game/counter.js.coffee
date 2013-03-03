@@ -3,12 +3,6 @@ namespace 'MtgHelper.Game', (exports) ->
     className: 'counter'
     @build: -> new @(arguments...)
 
-    # events:
-    #   'click .app-decrement-five': 'decrement_five'
-    #   'click .app-decrement-one': 'decrement_one'
-    #   'click .app-increment-one': 'increment_one'
-    #   'click .app-increment-five': 'increment_five'
-
     initialize: ->
       @template = JST['views/game/counter']
 
