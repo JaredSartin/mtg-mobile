@@ -3,7 +3,7 @@ body {
   font-family: "AvenirNextCondensed-Regular", "HelveticaNeue", "Droid Sans", sans-serif; }
   /* line 11, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
   body #content {
-    background-image: url("/img/worn-background.jpg");
+    background-image: url("../img/worn-background.jpg");
     background-position: top center;
     -webkit-box-shadow: inset 0 0 100px 10px black;
     -moz-box-shadow: inset 0 0 100px 10px black;
@@ -57,13 +57,13 @@ body {
       color: white; }
     /* line 73, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .controls .decrement {
-      background-image: url("/img/counter/dec.png");
+      background-image: url("../img/counter/dec.png");
       padding-top: 4px;
       padding-bottom: 6px; }
     /* line 77, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .controls .increment {
       padding-top: 10px;
-      background-image: url("/img/counter/inc.png"); }
+      background-image: url("../img/counter/inc.png"); }
   /* line 80, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
   .counter .counter-container {
     -webkit-border-radius: 5px;
