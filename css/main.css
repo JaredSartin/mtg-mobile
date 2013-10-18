@@ -27,23 +27,27 @@ body {
 /* line 35, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
 .counters-2 .counter {
   height: 50%; }
+  /* line 37, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+  .counters-2 .counter.pw1 {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg); }
 
-/* line 38, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+/* line 41, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
 .counters-3 .counter {
   height: 33%; }
 
-/* line 41, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+/* line 44, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
 .counters-4 .counter {
   height: 25%; }
 
-/* line 57, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+/* line 60, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
 .counter {
   text-align: center; }
-  /* line 59, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+  /* line 62, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
   .counter .controls {
     text-align: center;
     clear: both; }
-    /* line 62, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 65, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .controls .decrement, .counter .controls .increment {
       display: inline-block;
       height: 30px;
@@ -55,16 +59,16 @@ body {
       background-repeat: no-repeat;
       background-size: 100%;
       color: white; }
-    /* line 73, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 76, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .controls .decrement {
       background-image: url("../img/counter/dec.png");
       padding-top: 4px;
       padding-bottom: 6px; }
-    /* line 77, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 80, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .controls .increment {
       padding-top: 10px;
       background-image: url("../img/counter/inc.png"); }
-  /* line 80, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+  /* line 83, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
   .counter .counter-container {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -76,7 +80,7 @@ body {
     padding: 3px;
     background-color: #636363;
     margin: 0 auto; }
-    /* line 87, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 90, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container .remaining-life {
       -webkit-transition-property: width;
       -moz-transition-property: width;
@@ -98,7 +102,7 @@ body {
       position: relative;
       height: 20px;
       background-color: #f2f2f2; }
-      /* line 95, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 98, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container .remaining-life .life-counter {
         font-family: "AvenirNextCondensed-Bold", "HelveticaNeue-Bold", "Droid Sans", sans-serif;
         -webkit-border-radius: 28px;
@@ -117,10 +121,10 @@ body {
         font-size: 20px;
         border: 3px solid #636363;
         background-color: #f2f2f2; }
-    /* line 110, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 113, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-full .remaining-life {
       width: 100%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-full .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -136,17 +140,17 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 114, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 117, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-empty .life-counter {
       border: 3px solid #a10000; }
-    /* line 116, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 119, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-empty .remaining-life {
       background-color: #a10000;
       width: 0%; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-19 .remaining-life {
       width: 95%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-19 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -162,10 +166,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-18 .remaining-life {
       width: 90%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-18 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -181,10 +185,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-17 .remaining-life {
       width: 85%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-17 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -200,10 +204,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-16 .remaining-life {
       width: 80%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-16 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -219,10 +223,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-15 .remaining-life {
       width: 75%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-15 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -238,10 +242,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-14 .remaining-life {
       width: 70%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-14 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -257,10 +261,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-13 .remaining-life {
       width: 65%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-13 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -276,10 +280,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-12 .remaining-life {
       width: 60%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-12 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -295,10 +299,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-11 .remaining-life {
       width: 55%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-11 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -314,10 +318,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-10 .remaining-life {
       width: 50%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-10 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -333,10 +337,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-9 .remaining-life {
       width: 45%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-9 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -352,10 +356,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-8 .remaining-life {
       width: 40%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-8 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -371,10 +375,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-7 .remaining-life {
       width: 35%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-7 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -390,10 +394,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-6 .remaining-life {
       width: 30%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-6 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -409,10 +413,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-5 .remaining-life {
       width: 25%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-5 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -428,10 +432,10 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 122, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 125, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-4 .remaining-life {
       width: 20%; }
-      /* line 45, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+      /* line 48, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
       .counter .counter-container.life-4 .remaining-life .life-counter:after {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -447,24 +451,24 @@ body {
         position: absolute;
         left: -3px;
         top: 10px; }
-    /* line 128, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 131, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-3 .life-counter {
       border: 3px solid #a10000; }
-    /* line 130, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 133, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-3 .remaining-life {
       background-color: #a10000;
       width: 15%; }
-    /* line 128, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 131, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-2 .life-counter {
       border: 3px solid #a10000; }
-    /* line 130, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 133, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-2 .remaining-life {
       background-color: #a10000;
       width: 10%; }
-    /* line 128, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 131, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-1 .life-counter {
       border: 3px solid #a10000; }
-    /* line 130, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
+    /* line 133, /Volumes/spaaaaaace/git/mtg-client/source/css/main.css.sass */
     .counter .counter-container.life-1 .remaining-life {
       background-color: #a10000;
       width: 5%; }
