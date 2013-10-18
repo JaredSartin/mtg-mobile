@@ -1,0 +1,1 @@
+Support.Observer=function(){},_.extend(Support.Observer.prototype,{bindTo:function(e,t,n){e.bind(t,n,this),this.bindings=this.bindings||[],this.bindings.push({source:e,event:t,callback:n})},unbindFromAll:function(){_.each(this.bindings,function(e){e.source.unbind(e.event,e.callback)}),this.bindings=[]}});

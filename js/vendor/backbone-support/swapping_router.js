@@ -1,0 +1,1 @@
+Support.SwappingRouter=function(e){Backbone.Router.apply(this,[e])},_.extend(Support.SwappingRouter.prototype,Backbone.Router.prototype,{swap:function(e){this.currentView&&this.currentView.leave&&this.currentView.leave(),this.currentView=e,$(this.el).empty().append(this.currentView.render().el)}}),Support.SwappingRouter.extend=Backbone.Router.extend;
