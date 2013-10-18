@@ -1,0 +1,133 @@
+@import "compass/css3/box-shadow"
+@import "compass/css3/transition"
+@import "compass/css3/border-radius"
+
+$grey: #636363
+$lighter_grey: #F2F2F2
+$medium_red: #A10000
+
+body
+  font-family: 'AvenirNextCondensed-Regular', 'HelveticaNeue', 'Droid Sans', sans-serif
+  #content
+    background-image: url('/img/worn-background.jpg')
+    background-position: top center
+    +single-box-shadow(black, 0, 0, 100px, 10px, true)
+    margin: 0
+    padding: 0
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+
+//=================================
+// Counters Section
+//=================================
+
+.spacer
+  height: 30px
+
+.counters-1
+  .counter
+    height: 100%
+.counters-2
+  .counter
+    height: 50%
+.counters-3
+  .counter
+    height: 33%
+.counters-4
+  .counter
+    height: 25%
+
+=counter-fix
+  .life-counter:after
+    +border-radius(5px) 
+    display: block
+    width: 6px
+    height: 20px
+    content: '.'
+    text-indent: -999999em
+    background-color: $lighter_grey
+    position: absolute
+    left: -3px
+    top: 10px
+
+.counter
+  text-align: center
+  .controls
+    text-align: center
+    clear: both
+    .decrement, .increment
+      display: inline-block
+      height: 30px
+      width: 60px
+      margin: 0 3px
+      font-size: 1.75em
+      cursor: pointer
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: 100%
+      color: #fff
+    .decrement
+      background-image: url('/img/counter/dec.png')
+      padding-top: 4px
+      padding-bottom: 6px
+    .increment
+      padding-top: 10px
+      background-image: url('/img/counter/inc.png')
+  .counter-container
+    +border-radius(5px) 
+    width: 80%
+    height: 20px
+    padding: 3px
+    background-color: $grey
+    margin: 0 auto
+    .remaining-life
+      +transition-property(width)
+      +transition-duration(.5s)
+      +transition-timing-function(ease)
+      +border-radius(4px) 
+      position: relative
+      height: 20px
+      background-color: $lighter_grey
+      .life-counter
+        font-family: 'AvenirNextCondensed-Bold', 'HelveticaNeue-Bold', 'Droid Sans', sans-serif
+        +border-radius(28px) 
+        float: right
+        position: relative
+        top: -13px
+        left: 20px
+        height: 28px
+        width: 28px
+        padding: 5px
+        text-align: center
+        font-size: 20px
+        border: 3px solid $grey
+        background-color: $lighter_grey
+    &.life-full
+      .remaining-life
+        +counter-fix
+        width: 100%
+    &.life-empty
+      .life-counter
+        border: 3px solid $medium_red
+      .remaining-life
+        background-color: $medium_red
+        width: 0%
+    $i: 19
+    @while $i > 3
+      &.life-#{$i}
+        .remaining-life
+          +counter-fix
+          width: 5% * $i
+      $i: $i - 1
+    @while $i > 0
+      &.life-#{$i}
+        .life-counter
+          border: 3px solid $medium_red
+        .remaining-life
+          background-color: $medium_red
+          width: 5% * $i
+      $i: $i - 1
